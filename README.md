@@ -1,26 +1,5 @@
 # Linear Program for Optimal FPL Player Selection
 
-## Installation
-
-1. Install CGAL and create the cmake scripts:
-
-   ```
-   sudo apt-get install libcgal-dev
-   cgal_create_cmake_script
-   ```
-2. Compile:
-   ```
-   cmake .
-   make
-   ```
-3. Run with `lambda : [0, 0.5, 1]`:
-   ```
-   ./main 0
-   ./main 0.5
-   ./main 1
-   ```
-
-
 ## Theory
 
 ### Problem Description
@@ -42,9 +21,38 @@ A natural question that arises is:
 ### Linear Program Formulation
 The above problem can be formulated as an integer linear program. Let *p<sub>i</sub>* be the performance score, *team<sub>i</sub>* be the team, *pos<sub>i</sub>* be the position, and *c<sub>i</sub>* be the cost of player *i*. Then the linear program formulation reads:
 
+TODO
 
 Or, in matrix notation:
 
+TODO
+
+Relaxation: 
+
+TODO
+
 ### Proof that Solutions are Integral
+TODO
 
 ## Example
+TODO
+
+## Installation
+
+1. Install CGAL and create the cmake scripts:
+
+   ```
+   sudo apt-get install libcgal-dev
+   cgal_create_cmake_script
+   ```
+2. Compile:
+   ```
+   cmake .
+   make
+   ```
+3. Run with `lambda : [0, 0.5, 1]`:
+   ```
+   ./main 0
+   ./main 0.5
+   ./main 1
+   ```
