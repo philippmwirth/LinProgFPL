@@ -31,13 +31,19 @@
 - The combined cost of the selection must not exceed a given budget.
 
 
-A natural question that arises is: **Given a performance score for each player, what are the optimal picks under the given constraints?**
+A natural question that arises is: 
+
+**Given a performance score for each player, what are the optimal picks under the given constraints?**
 
 **Brute-Force:** The above question could easily be answered by iterating over all possible teams. However, in the Season 2020/2021, there are 68 goalkeepers, 219 defenders, 240 midfielders, and 76 forwards to pick from. Ignoring the constraints limiting the number of players from the same team, the number of possible picks is roughly 4 * 10<sup>27</sup>. Hence, even with the additional constraint, iterating over all teams is likely unfeasible.
 
-**Knapsack:** Anyone who has had at least one algorithm class in his life probably knows about the knapsack problem and how to solve it in pseudo-polynomial time. Unfortunately, the complexity of the pseudo-polynomial time algorithm grows exponentially in the number of constraints and therefore the above problem cannot be efficiently solved.
+**Knapsack:** Anyone who has had at least one algorithm class in his life probably knows about the knapsack problem and how to solve it in pseudo-polynomial time. Unfortunately, the complexity of the pseudo-polynomial time algorithm grows exponentially in the number of constraints and therefore the above problem cannot be efficiently solved (note that allowing at most three players from the same team introduces 20 constraints).
 
 ### Linear Program Formulation
+The above problem can be formulated as an integer linear program. Let *p<sub>i</sub>* be the performance score, *team<sub>i</sub>* be the team, *pos<sub>i</sub>* be the position, and *c<sub>i</sub>* be the cost of player *i*. Then the linear program formulation reads:
+
+
+Or, in matrix notation:
 
 ### Proof that Solutions are Integral
 
