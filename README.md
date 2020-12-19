@@ -46,7 +46,10 @@ Short proof that A is TU using the [Ghouila-Houri Theorem](https://en.wikipedia.
 The player data provided in `/data` is from Gameweek 13 in the season 20/21. The form of a player (average number of points in the last 4 weeks) was chosen as the performance metric and the total budget was set to 1000. This corresponds to the initial budget a user has when starting to play Premier League fantasy football.
 
 The plot below shows the solutions to the linear program for different values of *lambda*. As expected, the sum of the performance scores of the players improves and the cost increases when the value of *lambda* is decreased. The best feasible solution is the one with the smallest value for *lambda* which is still affordable with the given budget (indicated by the dotted line).
+
+
 <img src="docs/_build/cost_performance.png">
+
 
 Below is the output of the program for the best run (*lambda=0.02734375*). The sum of the performance scores is *88.2* which means that this team would have scored an average of almost 90 points in the last four weeks.
 
